@@ -7,10 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Update gist
-        uses: superman66/wakatime-sync@master
+      - name: wakatime-sync
+        uses: superman66/wakatime-sync@v1.0.0
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GIST_ID: ${{ secrets.GIST_ID}}
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           SCU_KEY: ${{ secrets.SCU_KEY }}
+
